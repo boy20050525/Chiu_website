@@ -25,19 +25,22 @@
 
   <!-- Navigation -->
   <nav>
-    <a href="#home">關於我</a>
-    <a href="#about">詳細資料</a>
+    <a href="#" class="icon-link">
+      <img src="image/icon.png" class="nav-icon" width="35" alt="chiu icon">
+    </a>
+    <a href="#about">關於我</a>
+    <a href="#details">詳細資料</a>
     <a href="#contact">聯絡方式</a>
   </nav>
 
   <!-- Home Section -->
   <section id="home">
-    <img src="" alt="Eason Profile">
+    <img src="image/506459952_2212469755890488_301543678549331369_n.jpg" width="300" alt="Eason Profile" class="my-profile">
     <div class="text-content">
       <h1 class="reveal-text">Chiu</h1>
       <h1 class="reveal-text">Yi-Yang</h1>
       <p class="typewriter-text">一個被茶毒的AI工程師</p>
-      <a class="btn" href="#contact">Contact me</a>
+      <a class="cta-button" href="#contact">Contact me</a>
     </div>
   </section>
 
@@ -64,15 +67,37 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h1>聯絡我</h1>
-    <p>若您對合作有興趣，歡迎來信 eason@example.com，我會盡快與您聯繫！</p>
-    <a class="btn" href="mailto:eason@example.com">發送 Email</a>
-  </section>
+<!-- Contact Section -->
+<section id="contact">
+  <div class="contact-container">
+    <h2>聯絡我</h2>
+    <p>若您對合作有興趣，歡迎透過以下方式與我聯繫！</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="contact-icon">📧</div>
+        <h3>Email</h3>
+        <p>eason@example.com</p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">📱</div>
+        <h3>Line</h3>
+        <p>@easondev</p>
+      </div>
+      <div class="contact-item">
+        <div class="contact-icon">💼</div>
+        <h3>LinkedIn</h3>
+        <p>linkedin.com/in/chiuyiyang</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-top">↑</button>
+
+  <script>
+    window.addEventListener('load', () => {
+      window.scrollTo(0, 0);
+    });
+  </script>
 
   <!-- External JavaScript -->
   <script src="scripts.js"></script>

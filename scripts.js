@@ -102,16 +102,16 @@ setTimeout(() => {
 }, 2000);
 
 // Scroll to Top
-const scrollTopBtn = document.querySelector('.scroll-top');
-window.addEventListener('scroll', function () {
-  if (window.pageYOffset > 300) {
-    scrollTopBtn.classList.add('visible');
-  } else {
-    scrollTopBtn.classList.remove('visible');
-  }
+document.querySelector('.icon-link')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.querySelector('section:first-of-type')?.scrollIntoView({ behavior: 'smooth' });
 });
-scrollTopBtn.addEventListener('click', function () {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+
+
+//REFRESH PAGE WILL reset to the top page
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
 });
 
 // Smooth Scroll
@@ -208,3 +208,4 @@ window.addEventListener('wheel', function (e) {
     isScrolling = false;
   }
 }, { passive: false });
+

@@ -46,25 +46,130 @@
 
   <!-- About Section -->
   <section id="about">
-    <div class="about-text">
-      <h1>About Me</h1>
-      <p>他有一雙清澈明亮的眼睛，透著毫無保留的信任與純真...</p>
-      <strong>PORTFOLIO</strong>
-    </div>
-    <div class="about-img">
-      <img src="https://via.placeholder.com/500x600/f4eae2/000000?text=Portfolio" alt="About Portfolio">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>關於我</h2>
+        <p>他有一雙清澈明亮的眼睛，透著毫無保留的信任與純真。個性溫和，待人真誠，總是微笑著傾聽他人，讓人感到安心自在。</p>
+        <p>專注於人工智慧技術開發，熱衷於探索機器學習的無限可能。在工作中追求技術卓越，在生活中享受簡單美好。</p>
+        <div class="programs-grid">
+          <div class="program-item">Python</div>
+          <div class="program-item">JavaScript</div>
+          <div class="program-item">Machine Learning</div>
+          <div class="program-item">Deep Learning</div>
+          <div class="program-item">React</div>
+          <div class="program-item">Node.js</div>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="image/about.jpg" alt="Portfolio">
+      </div>
     </div>
   </section>
 
   <!-- Details Section -->
   <section id="details">
-    <div class="details-img">
-      <img src="https://via.placeholder.com/500x600/ded3bc/000000?text=Work" alt="Work Portfolio">
+   <div class="details-output">
+        <!-- Floating decorative elements -->
+        <div class="floating-dot"></div>
+        <div class="floating-dot"></div>
+        <div class="floating-dot"></div>
+        <div class="floating-dot"></div>
+
+        <div class="left-column">
+            <h1 class="section-title">My Work</h1>
+            <div class="image-container">
+                <div class="profile-image">
+                    Professional Portrait
+                </div>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <div class="intro-section">
+                <p class="intro-text">
+                    Renz Suarez is a <span class="highlight">Senior Copywriter</span> with over 
+                    <span class="highlight">6 years</span> of experience specializing in 
+                    <span class="highlight">copywriting</span> and <span class="highlight">content strategy</span> 
+                    for different brands and organizations.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3 class="project-title">Place the title of your project here</h3>
+                    <p class="project-date">Add here any awards or things you want to highlight. Could also be a brief summary about the project you worked on.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Vhove Copywriting</h3>
+                    <p class="project-date">October 2022</p>
+                    <p class="project-description">
+                        Creative Excellence Awards - 20<br>
+                        CE Awardee BestCopywriting<br>
+                        Advertising, Media, and PR
+                    </p>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Tuesdays x Plantidahan</h3>
+                    <p class="project-date">Add here any awards or things you want to highlight. Could also be a brief summary about the project you worked on.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Tuesdays x Life Tech Pro</h3>
+                    <p class="project-date">Add here any awards or things you want to highlight. Could also be a brief summary about the project you worked on.</p>
+                </div>
+            </div>
+        </div>
+      </div>
+  </section>
+    <!-- Timeline Section -->
+  <section id="times">
+    <div class="times-container">
+      <div class="about-image">
+        <img src="image/time_image.jpg" alt="Work">
+      </div>
+      <div class="timeline">
+        <h2>工作經歷</h2>
+        <div class="timeline-item">
+          <div class="timeline-date">2023 - 現在</div>
+          <div class="timeline-title">資深AI工程師</div>
+          <p>負責機器學習模型開發與優化，專注於自然語言處理和電腦視覺領域的創新應用。</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2021 - 2023</div>
+          <div class="timeline-title">全端開發工程師</div>
+          <p>開發並維護多個大型網站應用，使用React、Node.js等現代技術棧。</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2019 - 2021</div>
+          <div class="timeline-title">前端開發工程師</div>
+          <p>專注於用戶體驗設計與前端技術實現，打造響應式網站與互動應用。</p>
+        </div>
+      </div>
     </div>
-    <div class="details-text">
-      <h2>My Work</h2>
-      <p><strong>Renz Suarez</strong> is a <strong>Senior Copywriter</strong>...</p>
-    </div>
+  </section>
+
+<!--pie chart Section-->
+  <section id="pie-chart">
+    <div class="skills-section">
+        <h2 class="pieChart-title">個人性格</h2>
+        
+        <div class="skills-container">
+            <div class="chart-container">
+                <div class="pie-chart" id="pieChart">
+                    <canvas id="pieCanvas" width="400" height="400"></canvas>
+                    <div class="chart-center">
+                        <div>性格<br>分析</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-list" id="skillsList">
+                <!-- 性格項目將由JavaScript動態生成 -->
+            </div>
+        </div>
+      </div>
   </section>
 
 <!-- Contact Section -->
@@ -97,6 +202,7 @@
     window.addEventListener('load', () => {
       window.scrollTo(0, 0);
     });
+    
   </script>
 
   <!-- External JavaScript -->

@@ -209,3 +209,82 @@ window.addEventListener('wheel', function (e) {
   }
 }, { passive: false });
 
+//Pie chart
+// 性格資料
+const skillsData = [
+    { name: '創造力', percentage: 85, color: '#d4a574' },
+    { name: '邏輯思維', percentage: 80, color: '#c4a574' },
+    { name: '溝通能力', percentage: 75, color: '#b89660' },
+    { name: '團隊合作', percentage: 70, color: '#a08650' },
+    { name: '解決問題', percentage: 65, color: '#8b7d6b' }
+];
+
+// 創建圓餅圖
+function createPieChart() {
+    const canvas = document.getElementById('pieCanvas');
+    const ctx = canvas.getContext('2d');
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = 160;
+    
+    const total = skillsData.reduce((sum, skill) => sum + skill.percentage, 0);
+    let currentAngle = -Math.PI / 2; // 從頂部開始
+    
+    // 繪製圓餅圖
+    skillsData.forEach((skill, index) => {
+        const sliceAngle = (skill.percentage / total) * 2 * Math.PI;
+        
+        // 繪製扇形
+        ctx.beginPath();
+        ctx.moveTo(centerX, centerY);
+        ctx.arc(centerX, centerY, radius, currentAngle, currentAngle + sliceAngle);
+        ctx.closePath();
+        ctx.fillStyle = skill.color;
+        ctx.fill();
+        
+        // 繪製邊框
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        
+        currentAngle += sliceAngle;
+    });
+}
+
+// 創建性格列表
+function createSkillsList() {
+    const skillsList = document.getElementById('skillsList');
+    
+    skillsData.forEach((skill, index) => {
+        const skillItem = document.createElement('div');
+        skillItem.className = 'skill-item';
+        
+        skillItem.innerHTML = `
+            <div class="skill-header">
+                <div class="skill-name">
+                    <span class="skill-icon" style="background: ${skill.color}"></span>
+                    ${skill.name}
+                </div>
+                <div class="skill-percentage">${skill.percentage}%</div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-progress" style="background: ${skill.color}; width: 0%;"></div>
+            </div>
+        `;
+        
+        skillsList.appendChild(skillItem);
+        
+        // 延遲動畫進度條
+        setTimeout(() => {
+            const progressBar = skillItem.querySelector('.skill-progress');
+            progressBar.style.width = skill.percentage + '%';
+        }, 300 + index * 100);
+    });
+}
+
+createPieChart();
+createSkillsList();
+
+
+
+

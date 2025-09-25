@@ -98,7 +98,7 @@ function typeWriter(element, text, speed = 100) {
 }
 setTimeout(() => {
   const typewriterText = document.querySelector('.typewriter-text');
-  typeWriter(typewriterText, '一個被茶毒的AI工程師', 80);
+  typeWriter(typewriterText, '目前還在尋找自己人生的目標', 80);
 }, 2000);
 
 // Scroll to Top
@@ -212,11 +212,12 @@ window.addEventListener('wheel', function (e) {
 //Pie chart
 // 性格資料
 const skillsData = [
-    { name: '創造力', percentage: 85, color: '#d4a574' },
-    { name: '邏輯思維', percentage: 80, color: '#c4a574' },
-    { name: '溝通能力', percentage: 75, color: '#b89660' },
-    { name: '團隊合作', percentage: 70, color: '#a08650' },
-    { name: '解決問題', percentage: 65, color: '#8b7d6b' }
+    { name: '創造力', percentage: 100, color: '#d4a574' },
+    { name: '邏輯思維', percentage: 100, color: '#c4a574' },
+    { name: '溝通能力', percentage: 100, color: '#b89660' },
+    { name: '團隊合作', percentage: 100, color: '#a08650' },
+    { name: '解決問題', percentage: 100, color: '#8b7d6b' },
+    { name: '屁股人', percentage: 100, color: '#8b7d6b' }
 ];
 
 // 創建圓餅圖

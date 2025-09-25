@@ -298,12 +298,21 @@ section.visible {
   margin-top: 3rem;
 }
 
+
 .contact-item {
+  display: block; /* 讓超連結像卡片一樣 */
+  text-decoration: none; /* 去掉底線 */
+  color: inherit; /* 保持文字顏色 */
   background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 15px;
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* About Section */
